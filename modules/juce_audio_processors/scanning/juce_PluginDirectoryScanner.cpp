@@ -72,6 +72,11 @@ String PluginDirectoryScanner::getNextPluginFileThatWillBeScanned() const
     return format.getNameOfPluginFromIdentifier (filesOrIdentifiersToScan [nextIndex.get() - 1]);
 }
 
+String PluginDirectoryScanner::getNextPluginFileOrIdentifierThatWillBeScanned() const 
+{
+    return filesOrIdentifiersToScan [nextIndex.get() - 1];
+}
+
 void PluginDirectoryScanner::updateProgress()
 {
     progress = (1.0f - nextIndex.get() / (float) filesOrIdentifiersToScan.size());

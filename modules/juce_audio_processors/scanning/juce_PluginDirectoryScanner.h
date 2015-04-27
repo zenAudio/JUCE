@@ -95,6 +95,8 @@ public:
     */
     String getNextPluginFileThatWillBeScanned() const;
 
+    String getNextPluginFileOrIdentifierThatWillBeScanned() const;
+
     /** Returns the estimated progress, between 0 and 1. */
     float getProgress() const                                       { return progress; }
 
